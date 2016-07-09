@@ -1,0 +1,23 @@
+#ifndef THREAD_TEST_H
+#define THREAD_TEST_H
+
+#include <QThread>
+
+class Thread_test : public QThread
+{
+    Q_OBJECT
+public:
+    explicit Thread_test(QObject *parent = 0);
+
+private:
+    void run();
+
+
+signals:
+    void FinishCount(const int value);
+
+public slots:
+
+};
+
+#endif // THREAD_TEST_H
